@@ -1,0 +1,1 @@
+:root{--text-color-third: rgb(30, 159, 171)}header h3{margin:0;font-size:30px;font-weight:600;color:var(--text-color-third)}section{display:flex;flex-direction:column;min-height:100vh}section div.main{flex-grow:1}html,body{margin:0;padding:0}/*# sourceMappingURL=style.min.css.map */

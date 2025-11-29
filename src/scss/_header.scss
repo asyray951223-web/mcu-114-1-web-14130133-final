@@ -1,0 +1,11 @@
+@use "./common";
+@use "./color";
+
+header {
+  h3 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
+  }
+}
