@@ -1,6 +1,7 @@
 @use "./common";
 @use "./color";
 
+/* ----- NAVIGATION BAR ----- */
 nav {
   position: fixed;
   display: flex;
@@ -13,29 +14,35 @@ nav {
   transition: 0.3s;
   z-index: 100;
 }
+
 .nav-logo {
   position: relative;
+
+  span {
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: var(--text-color-second);
+  }
 }
+
 .nav-name {
   font-size: 30px;
   font-weight: 600;
   color: var(--text-color-third);
 }
-.nav-logo span {
-  position: absolute;
-  top: -15px;
-  right: -20px;
-  font-size: 5em;
-  color: var(--text-color-second);
-}
+
 .nav-menu,
 .nav_menu_list {
   display: flex;
 }
+
 .nav-menu .nav_list {
   list-style: none;
   position: relative;
 }
+
 .nav-link {
   text-decoration: none;
   color: var(--text-color-second);
@@ -43,26 +50,57 @@ nav {
   padding-inline: 15px;
   margin-inline: 20px;
 }
-/* .nav-menu-btn {
-  display: none;
-}
-.nav-menu-btn i {
-  font-size: 28px;
-  cursor: pointer;
-} */
+
 .active-link {
   position: relative;
   color: var(--first-color);
   transition: 0.3;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+  }
 }
-.active-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -15px;
-  transform: translate(-50%, -50%);
-  width: 5px;
-  height: 5px;
-  background: var(--first-color);
-  border-radius: 50%;
+
+/* ----- MEDIA QUERY == 900px / RESPONSIVE NAV ----- */
+@media only screen and (max-width: 900px) {
+  .nav-button {
+    display: none;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    min-height: 450px;
+    height: 90vh;
+    transition: 0.3s;
+
+    &.responsive {
+      left: 0;
+    }
+  }
+
+  .nav_menu_list {
+    flex-direction: column;
+  }
+
+  .nav-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
