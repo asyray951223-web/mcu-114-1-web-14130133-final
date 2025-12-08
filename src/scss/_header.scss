@@ -32,3 +32,22 @@ header {
     }
   }
 }
+
+/* 活動連結樣式 (.active-link) */
+.active-link {
+  position: relative;
+  color: var(--first-color); /* 紫色 */
+  transition: 0.3;
+}
+/* 活動連結下方的紫色小圓點 */
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background: var(--first-color);
+  border-radius: 50%;
+}
