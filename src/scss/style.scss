@@ -17,6 +17,11 @@ body {
   background: var(--body-color);
 }
 
+.container {
+  width: 100%;
+  position: relative;
+}
+
 a {
   text-decoration: inherit;
   color: inherit;
