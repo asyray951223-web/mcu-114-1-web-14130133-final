@@ -1,7 +1,7 @@
-@use "./header";
-@use "./main";
 @use "./common";
 @use "./color";
+@use "./header";
+@use "./home";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 /* ----- 基礎重置 (Base Reset) ----- */
@@ -24,8 +24,10 @@ i {
 
 /* ------- 網頁本體 -------- */
 body {
+  position: relative;
   background: var(--body-color);
 }
+
 .container {
   width: 100%;
   position: relative;
@@ -36,8 +38,8 @@ a {
   color: inherit;
 }
 
-/* ----- 全域按鈕樣式 (.btn) ----- */
-.btn {
+/* ----- 全域按鈕樣式 (.commonbtn) ----- */
+.commonbtn {
   font-weight: 500;
   padding: 12px 20px;
   background: #efefef;
@@ -46,10 +48,10 @@ a {
   cursor: pointer; /* 滑鼠變手型 */
   transition: 0.4s; /* 動畫過渡時間 */
 }
-.btn > i {
+.commonbtn > i {
   margin-left: 10px; /* 圖示與文字間距 */
 }
-.btn:hover {
+.commonbtn:hover {
   background: var(--second-color); /* 懸停時背景變藍 */
   color: var(--color-white); /* 懸停時文字變白 */
 }
