@@ -1,14 +1,93 @@
+@use "./color";
+@use "./common";
+
 .overall_about {
   padding-block: 6em; /* 上下內距 */
 
+  /* 標題樣式 */
+  .top-header {
+    h1 {
+      font-weight: 600;
+      color: var(--text-color-second);
+      margin-bottom: 10px;
+    }
+    span {
+      color: #999;
+    }
+  }
+
+  .top-header {
+    text-align: center;
+    margin-bottom: 5em;
+  }
   .row {
     display: flex; /* 左右分欄 */
     justify-content: space-between;
     width: 100%;
     gap: 50px;
+
+    .col {
+      display: flex;
+      width: 50%; /* 各佔 50% */
+
+      /* ----- 關於我資訊卡片 ----- */
+      .about-info {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-block: 30px 70px;
+        padding-inline: 20px;
+        width: 100%;
+        background: var(--color-white);
+        box-shadow: 1px 8px 10px 2px var(--first-shadow-color); /* 陰影 */
+        border-radius: 20px;
+
+        p {
+          font-size: 15px;
+          color: #777;
+        }
+      }
+    }
   }
-  .col {
+
+  /* ----- 教育程度列表 ----- */
+  .education {
+    position: relative;
     display: flex;
-    width: 50%; /* 各佔 50% */
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 100%;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-color-second);
+      margin-bottom: 15px;
+    }
+
+    .resume-item {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      color: var(--text-color-second);
+      position: relative;
+    }
+
+    /* 學歷項目左側的圓點 */
+    .resume-item::before {
+      box-sizing: border-box;
+      content: "";
+      position: absolute;
+      margin-top: 2px;
+      left: -8px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50px;
+      background-color: var(--first-color);
+    }
   }
 }
