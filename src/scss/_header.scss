@@ -1,7 +1,7 @@
 @use "./common";
 @use "./color";
 
-header {
+nav {
   position: fixed; /* 固定在視窗頂端 */
   display: flex; /* 彈性佈局 */
   justify-content: space-between; /* 內容兩端對齊 */
@@ -20,7 +20,7 @@ header {
     color: var(--text-color-third);
   }
 
-  .menu-list {
+  .nav-menu {
     display: flex;
 
     .menu-item {

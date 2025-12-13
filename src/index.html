@@ -10,34 +10,38 @@
 
   <body>
     <div class="container">
-      <header>
+      <nav id="header">
         <div class="logo">
           <h3>Portfolio</h3>
         </div>
 
-        <div class="menu-list">
+        <div class="nav-menu" id="myNavMenu">
           <div class="menu-item">
             <a href="#home" class="nav-link active-link">首頁</a>
+            <div class="circle"></div>
           </div>
           <div class="menu-item">
-            <a href="#" class="nav-link">關於我</a>
+            <a href="#about" class="nav-link">關於我</a>
+            <div class="circle"></div>
           </div>
 
           <div class="menu-item">
             <a href="#" class="nav-link">技術</a>
+            <div class="circle"></div>
           </div>
 
           <div class="menu-item">
             <a href="#" class="nav-link">作品集</a>
+            <div class="circle"></div>
           </div>
         </div>
 
         <div class="meau-button">
           <button class="commonbtn">下載履歷 <i class="fa-regular fa-file-pdf"> </i></button>
         </div>
-      </header>
+      </nav>
 
-      <main class="wrapper">
+      <main class="wrapper" id="home">
         <section class="personal-box" id="home">
           <div class="personal-text">
             <div class="personal-text-card">
@@ -66,6 +70,39 @@
           <div class="personal-photo">
             <div class="image">
               <img src="./assets/images/myphoto.jpeg" alt="avatar" />
+            </div>
+          </div>
+        </section>
+
+        <section class="overall_about" id="about">
+          <div class="top-header">
+            <h1>關於我</h1>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, maxime?</span>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="about-info">
+                <h3>自我介紹</h3>
+                <p>
+                  我精通 HTML、CSS 和 JavaScript 以及其他先進的框架和庫，這使我能夠實現互動功能。此外，我還有使用內容管理系統（CMS）如
+                  WordPress 的經驗。
+                </p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="education">
+                <h3>教育程度</h3>
+                <div class="resume-item">
+                  <strong>銘傳大學 資訊管理系 碩士</strong>
+                  <strong>2025/9 ~ 2026/8</strong>
+                </div>
+                <div class="resume-item">
+                  <strong>xxx大學 資訊管理系 學士</strong>
+                  <strong>2023/9 ~ 2026/8</strong>
+                </div>
+              </div>
             </div>
           </div>
         </section>

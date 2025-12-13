@@ -1,0 +1,14 @@
+.overall_about {
+  padding-block: 6em; /* 上下內距 */
+
+  .row {
+    display: flex; /* 左右分欄 */
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+  }
+  .col {
+    display: flex;
+    width: 50%; /* 各佔 50% */
+  }
+}
