@@ -1,2 +1,52 @@
 @use "../color";
 @use "../common";
+
+/* ----- 技術/技能區塊 (Skills Box) ----- */
+.skills-section {
+  margin: 10px;
+  padding-block: 6em;
+
+  .top-header {
+    text-align: center;
+    margin-bottom: 5em;
+    h1 {
+      font-weight: 600;
+      color: var(--text-color-second);
+      margin-bottom: 10px;
+    }
+    span {
+      color: #999;
+    }
+  }
+
+  /* 技能進度條容器 */
+  .skills-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap; /* 允許換行 */
+
+    .skill-item {
+      flex-basis: calc(50% - 20px); /* 每個技能佔一半寬度減去間距 */
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .skill {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .progress-bar-wrap {
+      height: 10px;
+      border: 1px solid #ccc; /* 灰色外框 */
+    }
+
+    .progress-bar {
+      height: 10px;
+      background-color: var(--first-color); /* 紫色進度條 */
+    }
+  }
+}
