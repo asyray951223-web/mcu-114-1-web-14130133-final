@@ -51,11 +51,28 @@ a {
   border-radius: 10px;
   cursor: pointer; /* 滑鼠變手型 */
   transition: 0.4s; /* 動畫過渡時間 */
+  i {
+    margin-left: 10px; /* 圖示與文字間距 */
+  }
+
+  .commonbtn:hover {
+    background: var(--second-color); /* 懸停時背景變藍 */
+    color: var(--color-white); /* 懸停時文字變白 */
+  }
 }
-.commonbtn > i {
-  margin-left: 10px; /* 圖示與文字間距 */
+
+/* ----- 自定義滾動條樣式 (Webkit 瀏覽器) ----- */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 25px;
 }
-.commonbtn:hover {
-  background: var(--second-color); /* 懸停時背景變藍 */
-  color: var(--color-white); /* 懸停時文字變白 */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 軌道背景色 */
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc; /* 滾動條顏色 */
+  border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bbb; /* 滾動條懸停顏色 */
 }
