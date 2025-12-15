@@ -1,5 +1,5 @@
-@use "./common";
-@use "./color";
+@use "../color";
+@use "../common";
 
 nav {
   position: fixed; /* 固定在視窗頂端 */
