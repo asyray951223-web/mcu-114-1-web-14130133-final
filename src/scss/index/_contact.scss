@@ -21,8 +21,14 @@
 
   .grid {
     display: grid;
+    /* 自動填滿，最小 300px，自動換行 */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 10px;
+
+    div.grid > div a {
+      text-decoration: inherit;
+      color: inherit;
+    }
 
     .item {
       border: solid 1px #ccc;
@@ -33,6 +39,12 @@
       justify-content: center;
       align-items: center;
     }
+
+    .item:hover {
+      cursor: pointer;
+      border: solid 2px var(--first-color-hover); /* 邊框變色加粗 */
+    }
+
     a {
       display: flex;
       flex-direction: column;
@@ -41,9 +53,14 @@
       text-decoration: inherit;
       color: inherit;
     }
+
     h4 {
       margin: 0;
       font-size: 1.5rem;
+    }
+
+    .item:hover h4 {
+      color: var(--first-color-hover);
     }
 
     strong {
@@ -51,8 +68,19 @@
       color: var(--text-color-second);
     }
 
+    div.item:hover strong {
+      color: var(--first-color-hover);
+    }
+
     i {
       display: none;
+      /* 預設隱藏圖示 */
+    }
+
+    .item:hover i {
+      display: block; /* 懸停時顯示圖示 */
+      margin-top: 10px;
+      color: var(--first-color-hover);
     }
   }
 }
