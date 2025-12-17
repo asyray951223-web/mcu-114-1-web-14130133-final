@@ -1,0 +1,146 @@
+@use "../color";
+@use "../common";
+
+/* =========================================
+   1024px - 平板/小螢幕筆電
+   ========================================= */
+@media only screen and (max-width: 1024px) {
+  /* 使用 .wrapper .featured-box 來增加權重，對抗 _home.scss 的設定 */
+  .wrapper {
+    .featured-box {
+      .featured-text {
+        padding: 0;
+      }
+    }
+
+    .featured-image {
+      .image,
+      .image img {
+        width: 320px;
+        height: 320px;
+      }
+    }
+  }
+}
+
+/* =========================================
+   900px - 平板直立/大型手機
+   ========================================= */
+@media only screen and (max-width: 900px) {
+  /* ----- 導航欄 (Header) ----- */
+  nav {
+    .meau-button {
+      display: none;
+    }
+
+    /* 針對 nav 下的 .nav-menu 增加權重 */
+    .nav-menu {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px);
+      width: 100%;
+      min-height: 450px;
+      height: 90vh;
+      transition: 0.3s;
+    }
+
+    /* 當 JS 加上 .responsive class 時的狀態 */
+    .nav-menu.responsive {
+      left: 0;
+    }
+
+    .nav_menu_list {
+      flex-direction: column;
+    }
+  }
+
+  /* ----- 首頁 (Home) ----- */
+  .wrapper {
+    .featured-box {
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+
+      .featured-text {
+        width: 100%;
+        order: 2; /* 文字跑到下方 */
+        justify-content: center;
+        align-content: flex-start;
+        min-height: 60vh;
+      }
+
+      .social_icons {
+        margin-top: 2em;
+      }
+
+      .featured-image {
+        order: 1; /* 圖片跑到上方 */
+        justify-content: center;
+        min-height: 150px;
+        width: 100%;
+        margin-top: 65px;
+
+        .image,
+        .image img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+
+  /* ----- 關於與聯絡 (About & Contact) ----- */
+  /* 增加父層選擇器以提高權重 */
+  .about-section,
+  .contact-section {
+    .row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+
+      .col {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .about-info,
+        .contact-info {
+          width: 100%;
+        }
+      }
+    }
+
+    /* 修正作品集 grid 在手機版可能過寬的問題 */
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+}
+
+/* =========================================
+   540px - 手機直立
+   ========================================= */
+@media only screen and (max-width: 540px) {
+  .wrapper {
+    .featured-box {
+      .featured-name {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .contact-section {
+    .form-inputs {
+      flex-direction: column;
+      .input-field {
+        width: 100%;
+      }
+    }
+  }
+}

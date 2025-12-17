@@ -2,14 +2,14 @@
   padding-inline: 10vw; /* 左右留白 */
 
   /* ----- 首頁特色區塊 (Featured Box) ----- */
-  .personal-box {
+  .featured-box {
     position: relative;
     display: flex; /* 左右並排 */
     height: 100vh; /* 佔滿視窗高度 */
     min-height: 700px;
 
     /* 左側文字區 */
-    .personal-text {
+    .featured-text {
       position: relative;
       display: flex;
       justify-content: center;
@@ -19,7 +19,7 @@
       width: 50%; /* 佔一半寬度 */
       padding-left: 20px;
     }
-    .personal-text-card {
+    .featured-text-card {
       > span {
         background: var(--third-color); /* 名字背景色 */
         color: var(--color-white);
@@ -29,20 +29,20 @@
       }
     }
 
-    .Name {
+    .featured-name {
       font-size: 50px;
       font-weight: 600;
       color: var(--text-color-second);
       margin-block: 20px;
     }
 
-    .personal-information {
+    .featured-text-info {
       font-size: 15px;
       margin-bottom: 30px;
       color: var(--text-color-second);
     }
 
-    .personal-button {
+    .featured-text-btn {
       display: flex;
       gap: 20px; /* 按鈕間距 */
 
@@ -77,23 +77,24 @@
     }
 
     /* 右側圖片區 */
-    .personal-photo {
-      display: flex;
-      justify-content: right;
-      align-content: center;
-      min-height: 80vh;
-      width: 50%;
-      .image {
-        margin: auto 0;
-        width: 380px;
-        height: 380px;
-        border-radius: 55% 45% 55% 45%; /* 不規則圓形裁切 */
-        overflow: hidden; /* 隱藏超出邊界的部分 */
-      }
-      .image img {
-        width: 380px;
-        object-fit: cover; /* 保持圖片比例填滿 */
-      }
+  }
+  .featured-image {
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    min-height: 80vh;
+    width: 50%;
+
+    .image {
+      margin: auto 0;
+      width: 380px;
+      height: 380px;
+      border-radius: 55% 45% 55% 45%; /* 不規則圓形裁切 */
+      overflow: hidden; /* 隱藏超出邊界的部分 */
+    }
+    .image img {
+      width: 380px;
+      object-fit: cover; /* 保持圖片比例填滿 */
     }
   }
 }
