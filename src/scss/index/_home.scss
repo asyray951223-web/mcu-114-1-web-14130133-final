@@ -29,14 +29,14 @@
       }
     }
 
-    .featured-name {
+    .featured-text-name {
       font-size: 50px;
       font-weight: 600;
       color: var(--text-color-second);
       margin-block: 20px;
     }
 
-    .featured-text-info {
+    .featured-information {
       font-size: 15px;
       margin-bottom: 30px;
       color: var(--text-color-second);
@@ -77,24 +77,23 @@
     }
 
     /* 右側圖片區 */
-  }
-  .featured-image {
-    display: flex;
-    justify-content: right;
-    align-content: center;
-    min-height: 80vh;
-    width: 50%;
-
-    .image {
-      margin: auto 0;
-      width: 380px;
-      height: 380px;
-      border-radius: 55% 45% 55% 45%; /* 不規則圓形裁切 */
-      overflow: hidden; /* 隱藏超出邊界的部分 */
-    }
-    .image img {
-      width: 380px;
-      object-fit: cover; /* 保持圖片比例填滿 */
+    .featured-image {
+      display: flex;
+      justify-content: right;
+      align-content: center;
+      min-height: 80vh;
+      width: 50%;
+      .image {
+        margin: auto 0;
+        width: 380px;
+        height: 380px;
+        border-radius: 55% 45% 55% 45%; /* 不規則圓形裁切 */
+        overflow: hidden; /* 隱藏超出邊界的部分 */
+      }
+      .image img {
+        width: 380px;
+        object-fit: cover; /* 保持圖片比例填滿 */
+      }
     }
   }
 }

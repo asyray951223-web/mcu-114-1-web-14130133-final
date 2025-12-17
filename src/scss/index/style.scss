@@ -6,6 +6,7 @@
 @use "./skills";
 @use "./contact";
 @use "./footer";
+@use "./media";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 /* ----- 基礎重置 (Base Reset) ----- */
@@ -51,14 +52,14 @@ a {
   border-radius: 10px;
   cursor: pointer; /* 滑鼠變手型 */
   transition: 0.4s; /* 動畫過渡時間 */
-}
-.btn:hover {
-  background: var(--second-color); /* 懸停時背景變藍 */
-  color: var(--color-white); /* 懸停時文字變白 */
-}
 
-i {
-  margin-left: 10px; /* 圖示與文字間距 */
+  &:hover {
+    background: var(--second-color); /* 懸停時背景變藍 */
+    color: var(--color-white); /* 懸停時文字變白 */
+  }
+  i {
+    margin-left: 10px;
+  }
 }
 
 /* ----- 自定義滾動條樣式 (Webkit 瀏覽器) ----- */
