@@ -143,3 +143,9 @@
     }
   }
 }
+
+.resume-item,
+.skills-container {
+  display: flex;
+  flex-direction: column;
+}
