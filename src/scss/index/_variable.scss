@@ -1,0 +1,106 @@
+:root {
+  --featured-text-padding-left: 20px;
+  --featured-image-img-width: 380px;
+  --featured-image-img-height: 380px;
+  --featured-text-width: 50%;
+  --featured-text-justify-content: center;
+  --featured-text-align-content: center;
+  --featured-text-min-height: 80vh;
+  --featured-name-font-size: 50px;
+  --social_icons-margin-top: 5em;
+  --featured-image-justify-content: right;
+  --featured-image-min-height: 80vh;
+  --featured-image-width: 50%;
+  --featured-image-height: 380px;
+  --row-justify-content: space-between;
+  --col-width: 50%;
+  --featured-box-flex-direction: row;
+  --featured-box-justify-content: space-between;
+  --nav-menu-flex-direction: row;
+  --about-info-width: 100%; /* 新增預設值 */
+
+  @media only screen and (max-width: 1024px) {
+    /* 使用 .wrapper .featured-box 來增加權重，對抗 _home.scss 的設定 */
+    --featured-text-padding-left: 0px;
+    --featured-image-img-width: 380px;
+    --featured-image-img-height: 320px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    --meau-button-display: none;
+    /* ----- 導航欄 (Header) ----- */
+    --meau-button-display: none;
+    --nav-menu-position: fixed;
+    --nav-menu-top: 80px;
+    --nav-menu-left: -100%;
+    --nav-menu-flex-direction: column; /* 修正變數名稱，避免覆蓋 --nav-menu-left */
+    --nav-menu-justify-content: center;
+    --nav-menu-align-items: center;
+    --nav-menu-background: rgba(255, 255, 255, 0.7);
+    --nav-menu-backdrop-filter: blur(20px);
+    --nav-menu-width: 100%;
+    --nav-menu-min-height: 450px;
+    --nav-menu-height: 90vh;
+    --nav-menu-transition: 0.3s;
+    --about-info-width: 100%;
+
+    /* 當 JS 加上 .responsive class 時的狀態
+      left: 0;
+    }*/
+
+    /* ----- 首頁 (Home) ----- */
+    --featured-box-flex-direction: column;
+    --featured-box-justify-content: center;
+    --featured-text-width: 100%;
+    --featured-text-order: 2; /* 文字跑到下方 */
+    --featured-text-justify-content: center;
+    --featured-text-align-content: flex-start;
+    --featured-text-min-height: 60vh;
+    --featured-name-font-size: 40px;
+    --social_icons-margin-top: 2em;
+
+    --featured-image-order: 1; /* 圖片跑到上方 */
+    --featured-image-justify-content: center;
+    --featured-image-min-height: 150px;
+    --featured-image-width: 100%;
+    --featured-image-margin-top: 65px;
+
+    --featured-image-img-width: 150px;
+    --featured-image-height: 150px;
+    --featured-image-img-height: 150px;
+
+    /* ----- 關於與聯絡 (About & Contact) ----- */
+    /* 增加父層選擇器以提高權重 */
+    --row-flex-direction: column;
+    --row-justify-content: center;
+    --col-justify-content: center;
+    --col-width: 100%;
+
+    /* 修正作品集 grid 在手機版可能過寬的問題 
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }*/
+  }
+
+  /* =========================================
+   540px - 手機直立
+   ========================================= */
+  @media only screen and (max-width: 540px) {
+    --featured-name-font-size: 40px;
+
+    .contact-section {
+      .form-inputs {
+        flex-direction: column;
+        .input-field {
+          width: 100%;
+        }
+      }
+    }
+
+    .resume-item,
+    .skills-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

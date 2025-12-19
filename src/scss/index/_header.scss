@@ -23,6 +23,19 @@ nav {
   .nav-menu {
     display: flex;
 
+    position: var(--nav-menu-position);
+    top: var(--nav-menu-top);
+    left: var(--nav-menu-left);
+    flex-direction: var(--nav-menu-flex-direction);
+    justify-content: var(--nav-menu-justify-content);
+    align-items: var(--nav-menu-align-items);
+    background: var(--nav-menu-background);
+    backdrop-filter: var(--nav-menu-backdrop-filter);
+    width: var(--nav-menu-width);
+    min-height: var(--nav-menu-min-height);
+    height: var(--nav-menu-height);
+    transition: var(--nav-menu-transition);
+
     .menu-item {
       text-decoration: none; /* 去除底線 */
       color: var(--text-color-second);
@@ -50,4 +63,7 @@ nav {
   height: 5px;
   background: var(--first-color);
   border-radius: 50%;
+}
+.meau-button {
+  display: var(--meau-button-display);
 }

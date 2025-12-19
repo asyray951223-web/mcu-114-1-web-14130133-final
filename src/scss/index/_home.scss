@@ -7,17 +7,20 @@
     display: flex; /* 左右並排 */
     height: 100vh; /* 佔滿視窗高度 */
     min-height: 700px;
+    flex-direction: var(--featured-box-flex-direction);
+    justify-content: var(--featured-box-justify-content);
 
     /* 左側文字區 */
     .featured-text {
       position: relative;
       display: flex;
-      justify-content: center;
-      align-content: center;
-      min-height: 80vh;
+      justify-content: var(--featured-text-justify-content);
+      align-content: var(--featured-text-align-content);
+      min-height: var(--featured-text-min-height);
       flex-direction: column; /* 垂直排列 */
-      width: 50%; /* 佔一半寬度 */
-      padding-left: 20px;
+      width: var(--featured-text-width); /* 佔一半寬度 */
+      padding-left: var(--featured-text-padding-left);
+      order: var(--featured-text-order);
     }
     .featured-text-card {
       > span {
@@ -29,8 +32,8 @@
       }
     }
 
-    .featured-text-name {
-      font-size: 50px;
+    .featured-name {
+      font-size: var(--featured-name-font-size);
       font-weight: 600;
       color: var(--text-color-second);
       margin-block: 20px;
@@ -59,7 +62,7 @@
     /* 社群圖示 */
     .social_icons {
       display: flex;
-      margin-top: 5em;
+      margin-top: var(--social_icons-margin-top);
       gap: 30px;
       .icon {
         display: flex;
@@ -79,19 +82,23 @@
     /* 右側圖片區 */
     .featured-image {
       display: flex;
-      justify-content: right;
+      justify-content: var(--featured-image-justify-content);
       align-content: center;
-      min-height: 80vh;
-      width: 50%;
+      min-height: var(--featured-image-min-height);
+      width: var(--featured-image-width);
+      order: var(--featured-image-order);
+      margin-top: var(--featured-image-margin-top);
+
       .image {
         margin: auto 0;
-        width: 380px;
-        height: 380px;
+        width: var(--featured-image-img-width);
+        height: var(--featured-image-height);
         border-radius: 55% 45% 55% 45%; /* 不規則圓形裁切 */
         overflow: hidden; /* 隱藏超出邊界的部分 */
       }
       .image img {
-        width: 380px;
+        width: var(--featured-image-img-width);
+        height: var(--featured-image-img-height);
         object-fit: cover; /* 保持圖片比例填滿 */
       }
     }

@@ -22,13 +22,15 @@
   }
   .row {
     display: flex; /* 左右分欄 */
-    justify-content: space-between;
+    justify-content: var(--row-justify-content);
     width: 100%;
     gap: 50px;
+    flex-direction: var(--row-flex-direction);
 
     .col {
       display: flex;
-      width: 50%; /* 各佔 50% */
+      width: var(--col-width); /* 各佔 50% */
+      justify-content: var(--col-justify-content);
 
       /* ----- 關於我資訊卡片 ----- */
       .about-info {
@@ -38,7 +40,7 @@
         flex-direction: column;
         padding-block: 30px 70px;
         padding-inline: 20px;
-        width: 100%;
+        width: var(--about-info-width);
         background: var(--color-white);
         box-shadow: 1px 8px 10px 2px var(--first-shadow-color); /* 陰影 */
         border-radius: 20px;
